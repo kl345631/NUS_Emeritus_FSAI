@@ -1,0 +1,14 @@
+if elif else:
+
+1) Write a Python program to check whether a given year is a leap year or not.
+2) Write a Python program that takes marks as input and prints the grade based on the following criteria:
+
+90 and above: A
+80-89: B
+70-79: C
+60-69: D
+Below 60: F
+
+3) Write a Python program that takes a letter as input and checks whether it is a vowel or a consonant.
+4) Write a Python program to create a simple calculator that performs addition, subtraction, multiplication, or division based on user input.
+

@@ -1,0 +1,32 @@
+
+
+# take input below:
+--> Enter your name:
+--> Enter your roll no
+--> Enter your hobby
+--> Enter your favorite passtime
+--> All skills you have
+--> Btech year
+-->Aim
+
+
+# value from user, convert it into float and subtract 2 from it and print value.
+#override the converted data type into actual data type
+a=float(input())
+int(a)
+float()
+
+# take 4 inputs from user convert 2 into int and convert 2 into float
+x,y,z,a
+compare x>=y and a<z or z==7 and a>8
+
+
+
+
+#Input a string from user and check whether "ning" is present or not
+
+# take name from user and age and you print his next birthday age
+
+
+
+

@@ -1,0 +1,22 @@
+#TERNARY OPERATOR:
+
+1) Write a Python program to check if a number is even or odd using the ternary operator.
+
+2) Write a Python program to find the minimum of three numbers using the ternary operator.
+
+3) Write a Python program to assign a grade based on the marks using the ternary operator.
+
+4) Write a Python program to check if a character is a vowel or a consonant using the ternary operator.
+
+
+match for:
+
+1) Write a Python program that takes two numbers and an operator (+, -, *, /) as input and performs the corresponding operation using match.
+
+2) Write a Python program that takes a character as input and checks whether it is a vowel or a consonant using match.
+
+3) Write a Python program that takes a number (1-7) as input and prints the corresponding day of the week using match.
+
+4) Write a Python program that takes a traffic light color (red, yellow, green) as input and prints the appropriate action using match.
+
+5) even or odd using case 

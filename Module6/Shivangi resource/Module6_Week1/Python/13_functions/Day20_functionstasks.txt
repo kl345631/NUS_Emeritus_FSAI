@@ -1,0 +1,6 @@
+
+# write a function to check if a number is even or odd.
+
+# write a function to find largesrt number in a list.
+
+# write a function to find the reverse of a string.

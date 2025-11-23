@@ -1,0 +1,7 @@
+# Accept marks of 5 students in list from user, calculate average, highest, lowest.
+# Remove duplicates from a list.
+# List Reverser Without Using [::-1] or reverse()
+#Find the Second Largest Number
+#Search element in List
+# Product of all elements available into list
+# Count Positive, Negative, and Zero in list

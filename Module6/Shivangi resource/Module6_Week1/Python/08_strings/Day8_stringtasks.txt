@@ -1,0 +1,9 @@
+# Count vowels in a string
+# Reverse a string
+# Count occurance of a given character in string
+# Count number of words in string
+# Arrange string in alphabetic order
+# String is palindrome or not
+
+
+

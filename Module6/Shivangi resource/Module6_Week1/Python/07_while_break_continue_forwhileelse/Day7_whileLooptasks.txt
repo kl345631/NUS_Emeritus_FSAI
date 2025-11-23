@@ -1,0 +1,23 @@
+
+# while loop practice questions:
+
+# count length of a name using while loop
+# print sum of first 5 natural numbers(1+2+3+4+5)
+# print table of any number
+# Factorial of a number(3!--> 3x2x1) 
+# count number of vowel in string(a,e,i,o,u)
+# print Fibonacci series(0 1 1 2 3 5 8 13)
+# check whether inputed number is prime or not
+# check whether inputed number is prime or not in a given range
+# check if inputed number is palindrome or not  --> 123-> 321, 151->151(PALINDROME)
+# check if inputed number is armstrong or not --> 153 -> 1(3)+ 5(3)+ 3(3) -> 1534
+# find the sum of digits of an inputed number. 186 -> 1+8+6
+
+
+# FOR/WHILE else
+# print numbers 1-50 skipping 5 multiples . 1,2,3,4,6,7,8,9,11 .. using while and continue
+# print 1 - 20 except even numbers
+# Keep asking for Password Until Correct password given.
+#correct_password ="secret"
+# Create an Infine while loop and Stop loop when user Enters 'Exit'
+
