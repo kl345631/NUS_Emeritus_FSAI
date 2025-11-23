@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Day 15 DOM(Document Object Model)</title>
+</head>
+<body>
+    <h3 id="head1">Jack</h3>
+    <img id="image1" src="image1.png" width="100">
+    <input type="text" id="input1" value="Peter">
+    <button onclick="MyName()"> Show Name</button>
+    
+<p id="para">Hi! Aagam this side, learning MERN</p>
+    <button onclick="hide()">Hide</button>
+    <button onclick="show()">Show</button>
+
+    <div id="div1">
+       
+    </div>
+    <p id="remove1"> I will be removed!</p>
+
+    <script>
+        document.getElementById("div1").innerHTML = "<p>I am div 1</p>";
+         document.getElementById("div1").innerHTML += "<p>I am div 2</p>";
+
+         document.getElementById("div1").style.border = "2px solid red";
+
+         let r = document.getElementById("remove1");
+         r.remove();
+
+        let name = document.getElementById("head1");
+        name.innerHTML = "John";
+        document.getElementById("head1").innerHTML = "Harry";
+        document.getElementById("head1").style.color="green";
+        document.getElementById("head1").style.backgroundColor="orange";
+
+        document.getElementById("image1").src="image2.jpg";
+        document.getElementById("image2").width = 200;
+
+        function MyName()
+        {
+            let name = document.getElementById("input1").value;
+            alert("Hello " + name);
+        }
+
+ 
+    function hide()
+    {
+        document.getElementById("para").style.display="none";
+    }
+    function show()
+    {
+        document.getElementById("para").style.display="block";
+
+    }
+
+    
+   
+
+    </script>
+</body>
+</html> 

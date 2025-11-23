@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day16 Term and conditions checkbox</title>
+</head>
+<body>
+    <form onsubmit="ValidateTerms()">
+    <input type="checkbox" id="terms"> I agree to terms and conditions<br>
+    <input type="submit" value="Submit">
+        </form>
+
+    <script>
+        function ValidateTerms()
+        {
+            if(!document.getElementById("terms").checked)
+            {
+                alert("You must agree to terma and conditions!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

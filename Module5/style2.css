@@ -1,0 +1,31 @@
+#header {
+    font-size: medium;
+    text-align: center;
+}
+.myClass{
+    height: auto;
+    width: auto;
+    color: darkolivegreen;
+    text-align: center;
+}
+.highlight {
+    background-color: lightblue;
+    padding: 10px,20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px cornflowerblue;
+    transition: 0.3s;
+}
+#addClass {
+    height: auto;
+    width: auto;
+    background-color: lightblue;
+    border: 2px, rgb(0, 60, 255);
+}
+#removeClass {
+    height: auto;
+    width: auto;
+    background-color: lightgray;
+    border: 2px, darkgray;
+}
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!-- First Method -->
+    <button onclick="alert('You clicked me!')">Click Me!</button>
+    <button onclick="callme()">Click Me 2!</button>
+    <button id="btn1">Click Me 3!</button>
+    <button id="btn2">Click Me 4!</button>
+    <script>
+        // Event is an action on browser
+        // SECOND METHOD
+        function callme()
+        {
+            let value = prompt("Enter your name");
+            alert("Hello "+ value);
+        }
+
+        //THIRD METHOD
+        document.getElementById("btn1").onclick = function(){
+            confirm("I am third method");
+        }
+
+        //FOUR METHOD
+        document.getElementById("btn2").addEventListener('click',function(){
+           document.body.style.backgroundColor = "blue";
+        });
+
+        
+        let b =  document.getElementById("btn2");
+         b.addEventListener('click',function(){
+           b.style.backgroundColor = "blue";
+        });
+        
+
+    </script>
+</body>
+</html>

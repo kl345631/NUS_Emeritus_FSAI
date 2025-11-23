@@ -1,0 +1,67 @@
+<!-- Control statements: 
+  Conditional Statements: if else if, nested if, switch
+  Looping Statements: for, while, do while, for in, for of
+  Jump Statement: break, continue -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Day11 Control statements</title>
+</head>
+<body>
+    <script>
+        let age = 20;
+        if(age>=18){
+            console.log("You are eligible to vote.");
+        }
+
+        let age1 = 20;
+        if(age1>=18){
+            console.log("You are eligible to vote.");
+        }
+        else{
+            console.log("You are not eligible to vote.")
+        }
+
+
+        let marks = 80;
+        if(marks>=90){
+            console.log("Grade A");
+        }
+        else if(marks>=60){
+            console.log("Grade B");}
+            //console.log("Grade B.1");
+        else{
+            console.log("Grade C");
+        }
+
+        // nested if else
+        let username = "admin";
+        let password = "1234";
+        if(username === "admin"){
+            if(password === "1234"){
+                console.log("Login Successful!");
+            }
+            else{
+                console.log("Invalid Password!");
+            }
+        }
+        else{
+            console.log("Invalid Username!");
+        }
+
+        // switch
+        let day =5;
+        switch(day){
+            case 1: console.log("Monday");
+            break;
+            case 2: console.log("Tuesday");
+            break;
+            case 3: console.log("Wednesday");
+            break;
+            default:
+                console.log("Please provide days between 1 to 3");
+        }
+
+    </script>
+</body>
+</html>

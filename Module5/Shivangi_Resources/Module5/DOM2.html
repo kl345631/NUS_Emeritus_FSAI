@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>DOM Part2</title>
+</head>
+<body>
+    <p class="msg">message</p>
+    <p class="msg">message updated</p>
+    <button id="btn">I am Button</button>
+    <script>
+        let message = document.getElementsByClassName("msg")[0];
+       // message.innerHTML = 'message 2 updated';
+         message.innerText = 'message 2 updated Text';
+
+        let element = document.getElementsByTagName("p")[0];
+        element.style.color = "green";
+
+        let message2 = document.querySelector('.msg');
+        message2.style.color = "red";
+
+        let btn1 = document.querySelector('#btn');
+        btn1.innerHTML="Click me!";
+
+        let new1 = document.createElement("p"); // <p></p>
+        new1.innerHTML = "Paragraph using javascript"; // <p>Paragraph using javascript<p>
+        document.body.appendChild(new1);
+
+        // new1.remove();
+        
+
+    </script>
+</body>
+</html>

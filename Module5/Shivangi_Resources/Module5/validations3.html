@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 16 confirm password</title>
+</head>
+<body>
+    Password: <input type="password" id="pass"><br>
+    Confirm Password: <input type="password" id="cpassword">
+    <input onclick="confirmPassword()" type="button" Value="Submit">
+    <script>
+        function confirmPassword()
+        {
+        let pass = document.getElementById("pass").value;
+        let cpass = document.getElementById("cpassword").value;
+        
+        if(pass != cpass)
+        {
+            alert("Password does not match!");
+            return false;
+        }
+        return true;
+    }
+    </script>
+</body>
+</html>

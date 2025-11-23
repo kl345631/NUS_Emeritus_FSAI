@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array is the continous memory location of different data types(hetroeneous)
+      //  let students = ['David','John','Harry','Jack','Rich',10,45.4];
+        // document.write(students+"<br>");
+         //document.write(students[0]+"<br>");
+         //document.write(students[5]); 
+	 //document.write(students[8]); 
+         //document.write(students.length);
+
+         //for(let i=0;i<students.length;i++)
+        //{
+          //   document.write(students[i]);
+            // document.write("<br>");
+         //}
+
+        //let vegetables = [] // empty array
+        // vegetables[0] = 'Potato';
+         //vegetables[1] = 'Brinjal';
+
+        // for(let i=0;i<vegetables.length;i++)
+        // {
+        //     document.write(vegetables[i]);
+        //     document.write("<br>");
+        // }
+
+        // // for of
+       //  for(let veg of vegetables)
+        // {
+          //   document.writeln(veg);
+            // document.write("<br>");
+         //}
+
+	//for in
+
+        // for(let veg in vegetables)
+        // {
+        //     document.write(vegetables[veg]);
+        // }
+
+        // // built in arrays functions
+        let fruits = ['Apple','Mango','Kiwi','Mango','Orange','Cherry','Mango','Papaya','Grapes'];
+         document.write(fruits+"<br>");
+         fruits.pop(); // removes last element
+         document.write(fruits+"<br>");
+         fruits.shift(); // removes first element
+         document.write(fruits+"<br>");
+         fruits.push('Dragon fruit'); // add element at last
+         document.write(fruits+"<br>");
+         fruits.unshift('Pomegranate'); // add element at first position
+         document.write(fruits+"<br>");
+         document.writeln(fruits.indexOf('Mango')); //1
+         document.write(fruits.lastIndexOf('Mango'));  //6
+         document.write(fruits.at(3));
+         document.write("<br>");
+         document.write(fruits.includes('Orange'));
+         document.write("<br>");
+         document.write(fruits.includes('GRAPES'));
+         document.write(fruits.sort()+"<br>");
+        // document.write(fruits.reverse()+"<br>");
+        // document.write(fruits.length);
+        // document.write("<br>");
+        let fruits1 = ['Apple','Mango','Kiwi','Mango','Orange','Cherry','Mango','Papaya','Grapes'];
+        fruits1.splice(3,2,'Banana');
+        document.write(fruits1+"<br>");
+       // fruits1.splice(4,2);
+       // document.write(fruits1+"<br>");
+         let fruits2 = ['Apple','Mango','Kiwi','Mango','Orange','Cherry','Mango','Papaya','Grapes'];
+         let array1 = fruits2.slice(1,4);
+         document.write(array1);
+
+        // find first element matching condition
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Day 11 Looping Statements</title>
+</head>
+<body>
+    <script>
+/*
+
+        // for loop
+        for(let i=1;i<=5;i++)
+        {
+            console.log(i);
+        }
+
+        // print even numbers
+        for(let i=2;i<=10;i+=2)
+        {
+            console.log(i);
+        }
+
+        for(let i=1;i<=10;i++)
+        {
+            if(i%2==0)
+            {
+                console.log(i);
+            }
+        } 
+
+        // while
+        let j=1; // initialization
+        while(j<=10) // condition
+        {
+            console.log(j);
+            j++; //inc/dec
+        }*/
+
+        // do while
+        let correctPin =1234;
+        let enteredPin;
+        let attempts = 0;
+
+        do{
+            enteredPin = parseInt(prompt("Enter 4 digits PIN: "));
+            attempts++;
+            if(enteredPin === correctPin)
+            {
+                console.log("Access Granted!")
+            }
+            else{
+                console.log("Wrong PIN");
+            }
+        }while(enteredPin!==correctPin && attempts<3);
+
+        if(enteredPin != correctPin)
+        {
+            console.log("Card Blocked after 3 wrong attempts!")
+        }
+
+
+   // break -> stop the flow/loop
+   for(let i=1;i<=10;i++)
+   {
+      if(i === 6)
+      {
+         break;
+      }
+      console.log(i);
+   }
+
+   // continue -> skips current iteration
+   for(let i=1;i<=10;i++)
+   {
+      if(i === 6){
+         continue;
+      }
+      console.log(i);
+   }
+    </script>
+</body>
+</html>

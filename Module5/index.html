@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Income tax calculator</h1>
+    <form action ="">
+        <label for="income">Enter your Income:</label>
+        <input type="number" id="income" name="income" placeholder="Income">
+        <input type="button" value="Calculate" onclick="handleClick()">
+    </form>
+    <fieldset>
+        <legend>Tax Results:</legend>
+        <p id="results">Taxable Income: </p>
+        <!-- <p id="taxRate">Tax Rate: </p>
+        <p id="taxAmount">Tax Amount: </p> -->
+    </fieldset>
+
+    <script type="text/javascript">
+        function handleClick() {
+            let income = documentgetelementById('income');
+            console.log(income);
+            let calculateTax = calculateTax(parseInt(income.value));
+
+            let resultfield = documentgetelementById('result');
+            resultfield.textcontent = calculateTax;
+            // alert("Button clicked");
+        };
+        function calculateTax(income) {
+            tax = 0;
+            if (income > 25000 && income < 50000) {
+                tax = income * 0.05;
+                return tax;
+            }
+            else{
+                return income * 0.10;
+            }
+            return 0;
+        };
+        let income = document.getElementById("income");
+        // console.log(income);
+        // let calculateTax = calculateTax(income);
+        // let results = documentgetelementById("result");
+        // resultfield.textcontent = calculateTax;
+    </script>
+</body>
+</html>

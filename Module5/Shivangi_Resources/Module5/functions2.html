@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Functions</title>
+</head>
+<body>
+    <script>/*
+        function expression-> assign a function to a variable
+    
+   let sum = function(a,b){return a+b;}
+   console.log(sum(Number(prompt('Enter a: ')),Number(prompt('Enter b: '))));
+
+   // ARROW FUNCTION
+   let sum1 = (a,b) => a+b;
+   console.log(sum1(4,9));
+
+   //Default arguments
+   function sum2(a,b,c=0)
+   {
+    console.log(a+b+c);
+   }
+  sum2(3,6);
+  sum2(5,3,2);
+
+  function greeting(name = 'Default')
+  {
+    console.log(`Hello, ${name}`);
+  }
+  greeting('john');
+  greeting();
+
+  //nested funtions
+  function outer(){
+    function inner()
+    {
+        console.log('INNER FUNCTION');
+    }
+    inner();
+  }
+  outer();*/
+
+  //IIFE(Immediately invoked function expression)
+  (function(){
+    console.log('IIFE');
+  })
+  ();
+
+   (function(){
+    console.log('IIFE 2');
+  })
+  ();
+ 
+
+    </script>
+</body>
+</html>
