@@ -8,3 +8,4 @@ git remote add origin https://github.com/kl345631/NUS_Emeritus.git
 git push -u origin main
 git status
 git pull
+https://git-scm.com/cheat-sheet#diff-commits
