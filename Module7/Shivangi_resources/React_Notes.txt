@@ -1,0 +1,190 @@
+What is a Frontend Framework?
+A frontend framework is a ready-made structure + tools + rules that help developers build:
+Fast, Interactive, Scalable, Single-page applications
+
+
+Why Frontend Frameworks Were Created?
+Problem 1: Websites used to refresh on every click
+Problem 2: Code became unmanageable
+Problem 3: Performance issues
+Problem 4: Different browsers behave differently
+
+
+Student Feature:  	Framework Benefit:
+
+Live order status	Reactive state management
+Search restaurants	Fast rendering
+Filters			Components
+Login/Logout		Routing
+Cart			Data binding
+Map on homepage		Third-party integration
+
+How Frontend Frameworks Work Internally?
+STEP 1: Component-Based Architecture
+STEP 2: Virtual DOM / Optimized DOM
+STEP 3: Routing
+
+How Virtual DOM Works?
+Step 1 → React creates a virtual copy of the UI -> A JavaScript object representing your UI.
+
+Step 2 → When something changes -> React updates the Virtual DOM, not the real DOM.
+
+Step 3 → Diffing (Compare both DOMs)
+React checks -> What changed? Which component updated?
+
+Step 4 → Update ONLY the changed part in the real DOM -> Not the whole page — just the piece that changed.
+
+This is called Reconciliation.
+
+
+
+
+
+
+
+
+Component-Based Design:
+
+Component-Based Design means breaking your UI into small, reusable, independent pieces called components.
+Examples of components:
+
+Navbar, Button, SearchBar, ProductCard, Footer, ChatMessage, Sidebar, LoginForm
+
+Each component:
+1) has its own structure
+2) has its own design
+3) has its own logic
+4) can be reused anywhere
+
+
+
+
+How Components Work Internally (Simple Version)
+
+A component has 3 parts:
+1. Structure (HTML / JSX) -> Defines how it looks.  -> JSX -> javascript xml
+
+2. Style (CSS) -> Defines the design.
+
+3. Logic (JS) -> Defines how it behaves.
+
+
+
+
+<h1 id="head1"></h1>
+
+<script>
+  document.getElementById("head1").innerHTML = "I am heading";
+</script>
+
+
+
+
+function heading1(){
+  return (
+    <h1>I am heading </h1>
+)
+
+}
+
+
+
+
+
+
+
+
+
+
+
+Single-Page Applications:
+A web application that loads only one HTML page, and updates content dynamically without full page reload.
+Browsers don’t refresh the entire page; only a specific part updates.
+
+
+
+
+MERN: MongoDB Express.js React.js Node.js
+1) It is Open Source
+2) It supports modern applications
+3) It uses JavaScript everywhere(frontend+backend+node.js)
+
+MongoDB -> NoSQL(stores the data in JSON format, document oriented) -> database
+{
+  "name": "john",
+  "email": "john123@gmail.com"
+}
+
+Express.js -> backend web framework for Node.js
+1) Helps create APIs and handle HTTP request easily.
+
+React.js -> Frontend library for building user Interface
+1) Uses components and state to build interactive user Interface.
+example: 
+function greet()
+{
+  return <h1> hello </h1>
+}
+
+Node.js -> JavaScript runtime environment(run JS outside browser)
+1) Used to build the server-side of the applications
+2) Handle requests, run Express.js and connect to MongoDB.
+
+
+
+
+NODE.JS -> NPM  ->
+
+MONGO DB -> DEPENDENCIES
+EXPRESS.JS -> DEPENDENCIES
+REACT.JS -> DEPENDENCIES
+
+
+NPM INSTALL MONGODB, EXPRESSJS
+
+
+
+
+
+
+
+
+
+
+
+
+HOW MERN WORKS Together? What is the Flow?
+1) User(Frontend) -> Interact with React -> login
+2) React -> sends request to Express.js API(via fetch or axios)
+3) Express.js(running in Node.js) -> process request , interact with MongoDB
+4) MongoDB -> Returns data to Express.js
+5) Express.js-> sends response back to react.
+6) React -> Updates the UI with the new data.
+
+
+
+CRA -> CREATE-REACT-APP: npm create-react-app appname
+vite -> fast: npm create vite@latest appname
+
+
+
+App.jsx ->main.jsx -> index.html
+
+
+--TO RUN DEV APP
+npm run dev
+
+--Kim
+ cd C:\Users\Kim\NUS_Emeritus\FSAI_main\Module7\Shivangi_resources\React_Components\sep1
+(.venv) PS C:\Users\Kim\NUS_Emeritus\FSAI_main\Module7\Shivangi_resources\React_Components\sep1> npm install
+>> npm run dev
+
+
+
+
+
+
+
+
+
+
