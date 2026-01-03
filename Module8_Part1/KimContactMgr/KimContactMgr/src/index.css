@@ -33,6 +33,16 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-style: italic;
+}
+
+.app {
+  max-width : 550px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgb(229, 226, 222);
+  border-radius: 15px;
+  box-shadow: 0 6px 6px rgba(117, 63, 2, 0.1);
 }
 
 button {
@@ -47,13 +57,36 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #e8380c;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.add-btn {
+  background-color: #f1bc49;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+}
+.delete-btn {
+  background-color: #f66a06;
+  color: #ffffff; 
+  border: none;
+  padding: 10px 15px;
+}
+.empty {
+  text-align: center;
+  font-style: italic;
+  color: rgb(168, 164, 164);
+}
+.toggle-btn {
+  background-color: #c4c3c0;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

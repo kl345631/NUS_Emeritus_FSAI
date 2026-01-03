@@ -24,9 +24,9 @@ function App() {
 
   // Function: Add a new contact
   // 'contact' parameter comes from the ContactForm component
-  const addContact = (contact) => {
+  const addContact = (newcontact) => {
     // Spread syntax: create new array + append new contact
-    setContacts([... contacts, contact]);
+    setContacts([... contacts, newcontact]);
   };
 
   const deleteContact = (contact_id) => {
@@ -43,6 +43,7 @@ function App() {
     //   <Array items={fruit}/>
     // </>
     <>
+    <div className="app">
     <h1>Contact Manager</h1>
 
     {/* Contact form where user adds new contact */}
@@ -56,6 +57,7 @@ function App() {
     
     {/* Conditional Rendering → if showList is true, show <ContactList> */}
       {showList && (<ContactList contacts={contacts} onDelete={deleteContact} />)}
+    </div>
     </> 
   );
 }

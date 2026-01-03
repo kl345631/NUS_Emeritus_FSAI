@@ -1,24 +1,21 @@
-
+import { Container, Row, Col} from "react-bootstrap";
 import ListingCard from "../components/listings/ListingCard";
-
-let listing = [{id:1, title: "Cozy apartment in City Center", image:"public/images/house.jpg"},
-    { id: 2, title: "Spacious Villa with Garden", image:"public/images/house.jpg" },
-    { id: 3, title: "Modern Studio near Metro", image:"public/images/house.jpg" },
-    { id: 4, title: "Luxury Penthouse with Pool", image:"public/images/house.jpg" },
-    { id: 5, title: "Family Home in Suburbs", image: "public/images/house.jpg"},
-]
+import listings from "../services/data";
+import AppRoutes from "../routes/AppRoutes";
 
 export default function HomePage() {
     return (
-        <div>
-            <h1>Welcome to my HomeListing App</h1>
-            <p>
-                listing.map({listing}) => (
-                    key={listing.id}
-                    <ListingCard listing={listing} />    
-                )
-                          
-            </p>
-        </div>
-    );
+        <Container>
+            <h2 className="mb-4">Welcome to my Home Listings</h2>
+            <Row >
+                {listings.map((listing) => (
+                    // sm={12} means 1 card per row on mobile
+                    // md={4} means 3 cards per row on desktops (12 / 4 = 3) 
+                    <Col key={listing.id} sm={12} md={4} className= "g-4" >
+                        <ListingCard listing={listing} />
+                    </Col>
+                ))}
+            </Row>
+        </Container>
+    )
 }

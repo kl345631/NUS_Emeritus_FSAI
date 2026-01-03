@@ -1,0 +1,7 @@
+1a) Write a brief explanation of React’s core features: component-based architecture, Virtual DOM, and unidirectional data flow. 
+component-based architecture – reusable codes called components
+virtual DOM – Document Object Model, in memory copy of the real DOM. 
+Unidirectional data flow – data flowing in one direction from parent to child component via props. 
+
+1b) Discuss why these features make React ideal for building modern web applications.
+These features allows code and web applications to be scalable, easy to maintain and debug, faster and responsive.

@@ -162,17 +162,16 @@ HOW MERN WORKS Together? What is the Flow?
 6) React -> Updates the UI with the new data.
 
 
-
-CRA -> CREATE-REACT-APP: npm create-react-app appname
+Creat REACT APP using CRA(old) or VITE(new):
+CRA -> CREATE-REACT-APP: npm or npx create-react-app appname
+npm start
 vite -> fast: npm create vite@latest appname
-
+npm run dev
 
 
 App.jsx ->main.jsx -> index.html
 
 
---TO RUN DEV APP
-npm run dev
 
 --Kim
  cd C:\Users\Kim\NUS_Emeritus\FSAI_main\Module7\Shivangi_resources\React_Components\sep1
