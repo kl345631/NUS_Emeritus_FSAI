@@ -1,0 +1,45 @@
+
+https://github.com/NI-vishwas/FSAI/0925.git
+https://dev.mysql.com/downloads/mysql/
+
+Workbench: https://dev.mysql.com/downloads/workbench/
+
+Employees sample db: https://dev.mysql.com/doc/employee/en/
+
+Northwind: https://en.wikiversity.org/wiki/Database_Examples/Northwind/MySQL
+
+USE Northwind;
+SHOW TABLES;
+
+SELECT * FROM Products;
+SELECT * FROM Orders;
+
+-- Get all the customers from UK
+SELECT * FROM Customers WHERE Country = 'UK';
+
+-- Get all the Customers & their orders
+SELECT * FROM Orders;
+SELECT c.CustomerName, c.CustomerID, o.OrderID 
+FROM Customers c 
+INNER JOIN Orders o 
+ON c.CustomerID = o.CustomerID;
+
+CREATE DATABASE house_listing_db;
+USE house_listing_db;
+
+-- Create the agents table
+CREATE TABLE agents(
+agent_id INT AUTO_INCREMENT PRIMARY KEY,
+agent_name VARCHAR(50) UNIQUE,
+agent_email VARCHAR(50) NOT NULL,
+agent_phone VARCHAR(10) 
+);
+
+-- Look at the structure
+DESCRIBE agents;
+-- Insert the data
+INSERT INTO agents(agent_name,agent_email) VALUES ('vishwas','vishwas@example.com');
+INSERT INTO agents(agent_name,agent_email) VALUES ('vks','vks@example.com');
+-- Look at the data inserted
+SELECT * FROM agents;
+SELECT agent_name FROM agents;

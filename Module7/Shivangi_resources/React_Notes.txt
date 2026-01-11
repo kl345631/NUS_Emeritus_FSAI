@@ -27,7 +27,7 @@ STEP 3: Routing
 How Virtual DOM Works?
 Step 1 → React creates a virtual copy of the UI -> A JavaScript object representing your UI.
 
-Step 2 → When something changes -> React updates the Virtual DOM, not the real DOM.
+Step 2 → When something changes -> React updates the Virtual DOM, not the real DOM.,
 
 Step 3 → Diffing (Compare both DOMs)
 React checks -> What changed? Which component updated?
@@ -162,16 +162,17 @@ HOW MERN WORKS Together? What is the Flow?
 6) React -> Updates the UI with the new data.
 
 
-Creat REACT APP using CRA(old) or VITE(new):
-CRA -> CREATE-REACT-APP: npm or npx create-react-app appname
-npm start
+
+CRA -> CREATE-REACT-APP: npm create-react-app appname
 vite -> fast: npm create vite@latest appname
-npm run dev
+
 
 
 App.jsx ->main.jsx -> index.html
 
 
+--TO RUN DEV APP
+npm run dev
 
 --Kim
  cd C:\Users\Kim\NUS_Emeritus\FSAI_main\Module7\Shivangi_resources\React_Components\sep1
@@ -179,6 +180,40 @@ App.jsx ->main.jsx -> index.html
 >> npm run dev
 
 
+
++62-770693100
+
+
+arrival hall, yellow signage 175K/car 
+
+Noel: 
+[Sept]
+Livewell $87.2
+Q&M $564.6
+R Q&M $128.6
+R Q&M $128.6
+
+export default function ToDoList ({tasks}) {
+    return (
+        <>
+            <ul>
+                 {tasks.map((t,index) => (
+                    <li key={index}> {t} </li>
+                 ))} 
+            </ul>
+        </>
+    )
+}
+
+// const listItems = products.map(product =>
+//   <li key={product.id}>
+//     {product.title}
+//   </li>
+// );
+
+// return (
+//   <ul>{listItems}</ul>
+// 
 
 
 

@@ -1,0 +1,10 @@
+https://github.com/NI-vishwas/FSAI-0925.git
+
+https://docs.python.org/3/library/venv.html
+
+node index.js
+
+----- kim
+mkdir Kim_student_app
+npm init -y
+npm i express pug better-sqlite3 body-parser nodemon
