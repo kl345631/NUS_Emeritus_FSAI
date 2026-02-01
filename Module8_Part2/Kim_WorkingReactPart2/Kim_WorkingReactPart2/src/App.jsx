@@ -90,25 +90,25 @@ import { Message1 } from '../../../WorkingWithReactPart2/sep1/src/components/Mes
 //   )
 // }
 
-// // useRef: focus input, store value without re-render //focus is an inbuilt function
-// export default function App() {
-//   const inputRef = useRef(null);
-//   console.log(inputRef);
-//   const logValue = () => {console.log(inputRef.current.value)}
+// useRef: focus input, store value without re-render //focus is an inbuilt function
+export default function App() {
+  const inputRef = useRef(null);
+  console.log(inputRef);
+  const logValue = () => {console.log(inputRef.current.value)}
 
-//   return (
-//     <div>
-//       <h2>useRef Example:</h2>
-//       <input 
-//         ref={inputRef} //value stored in inputbox will be stored in ref (null)
-//         type = 'text'
-//         placeholder='type something and its log in console'
-//       />
-//       <button onClick={() => inputRef.current.focus()}> Highlight input box </button> 
-//       <p><button onClick={logValue}>Log to Console</button></p>
-//     </div>
-//   )
-// }
+  return (
+    <div>
+      <h2>useRef Example:</h2>
+      <input 
+        ref={inputRef} //value stored in inputbox will be stored in ref (null)
+        type = 'text'
+        placeholder='type something and its log in console'
+      />
+      <button onClick={() => inputRef.current.focus()}> Highlight input box </button> 
+      <p><button onClick={logValue}>Log to Console</button></p>
+    </div>
+  )
+}
 
 // // REACT FORMS: controlled and uncontrolled forms
 // export default function App() {
