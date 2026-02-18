@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Student List</h1>
+<a href="/add">Add Student</a>
+
+<ul>
+    {% for student in students %}
+        <li>
+            {{ student.name }} - {{ student.course }}
+            <a href="/delete/{{ student.id }}">❌</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

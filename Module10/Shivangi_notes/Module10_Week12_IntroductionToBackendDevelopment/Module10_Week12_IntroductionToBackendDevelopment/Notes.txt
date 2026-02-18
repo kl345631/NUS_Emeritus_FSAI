@@ -1,0 +1,353 @@
+What is Backend Software Engineering?
+Backend software engineering is about writing code that works behind the scenes of a website or app.
+
+It handles:
+
+Logic
+
+Data
+
+Security
+
+Communication with database
+
+Sending correct responses to users
+
+
+
+| Part          | Role          |
+| ------------- | ------------- |
+| Customer      | User          |
+| Menu & waiter | Frontend      |
+| Kitchen       | **Backend**   |
+| Chef cooking  | Backend logic |
+| Store room    | Database      |
+
+The customer never sees the kitchen, but everything depends on it.
+
+
+Technical example:
+
+When a user submits a login form:
+
+Backend checks username & password
+
+Backend talks to database
+
+Backend sends success or failure
+
+User → Backend → Database → Backend → User
+
+
+
+
+
+
+What is Node.js and Express.js?
+
+
+Node.js allows JavaScript to run on the server, not just in the browser.
+
+Before Node.js:
+
+JavaScript → Browser only
+
+After Node.js:
+
+JavaScript → Backend servers also
+console.log("Hello Backend");
+
+With Node.js, this runs on the server, not the browser.
+Node.js is like:
+
+“JavaScript engine for backend”
+
+
+
+
+What is Express.js?
+
+Express.js is a framework built on Node.js that makes backend development easy and fast.
+
+It helps:
+
+Handle URLs (routes)
+
+Handle requests & responses
+
+Build web apps & APIs
+
+ Example
+app.get('/', (req, res) => {
+  res.send("Hello from server");
+});
+
+
+
+
+This means:
+
+When user visits /
+
+Server sends a response
+
+Relationship
+Node.js → Engine
+Express.js → Toolkit
+
+Node.js runs JavaScript on the server, and Express.js simplifies building backend web applications using Node.js.
+
+
+
+
+
+What is Server-Side Web Application Development?
+Server-side development means:
+
+The server creates the response, not the browser.
+
+Example Without Server-Side
+
+Static website:
+
+HTML file opens
+
+Same content for everyone
+
+Example With Server-Side
+
+Dynamic website:
+
+Server decides what to show
+
+Data comes from database
+
+Example Flow
+User requests page
+→ Server processes logic
+→ Server fetches data
+→ Server sends HTML
+
+Code Example (Express)
+app.get('/profile', (req, res) => {
+  res.send("User Profile Page");
+});
+
+
+Server decides what page to send.
+
+NOTE: Server-side web application development handles user requests, business logic, and database operations on the server.
+
+
+
+
+What is Pug Template Engine?
+
+Pug is a template engine that helps create dynamic HTML pages easily.
+
+Instead of writing full HTML, you write short and clean syntax.
+
+Normal HTML
+<h1>Hello</h1>
+<p>Welcome</p>
+
+Pug Version
+h1 Hello
+p Welcome
+
+
+✔ Less code
+✔ Easy to read
+✔ Dynamic data support
+
+Dynamic Example
+h1 Hello #{username}
+
+
+If username = Rahul, output:
+
+<h1>Hello Rahul</h1>
+
+
+Pug is a template engine used with Express.js to generate dynamic HTML on the server.
+
+
+
+
+Creating a Database-Driven Web Application with Express.js
+
+A database-driven app:
+
+Stores data permanently
+
+Reads, writes, updates, deletes data
+
+
+Real-Life Example
+
+Student Management System:
+
+Student details stored in database
+
+Data doesn’t disappear when server restarts
+
+Flow
+User → Express Route
+→ Database (SQLite/MySQL)
+→ Express → HTML Response
+
+Example Code (Express + DB)
+const students = db.prepare("SELECT * FROM students").all();
+res.render('index', { students });
+
+
+Means:
+
+Fetch students from database
+
+Send data to page
+
+Why Database is Important
+Without DB	With DB
+Data lost	Data saved
+Temporary	Permanent
+Not scalable	Scalable
+
+
+A database-driven web application uses Express.js to handle requests and a database to store and retrieve data dynamically.
+
+
+Express.js running on Node.js handles server-side logic, uses Pug to generate HTML, and stores data in a database to create a dynamic web application.
+
+
+
+
+
+
+
+
+
+PREREQUISITES for STUDENT MANAGEMENT PROJECT:
+https://code.visualstudio.com/
+
+https://www.python.org/downloads/
+
+https://nodejs.org/en/download  v.20 ...
+
+https://sqlitebrowser.org/dl/
+
+
+
+mkdir student-app-sqlite
+cd student-app-SQLite
+npm init -y
+
+
+mkdir database
+mkdir routes
+mkdir views
+mkdir public
+
+
+CREATE ALL FILES AT ONCE
+type nul > app.js
+type nul > package.json
+
+type nul > database\db.js
+type nul > routes\studentRoutes.js
+type nul > views\layout.pug
+type nul > views\index.pug
+type nul > views\add.pug
+type nul > public\style.css
+
+
+
+INSTALL DEPENDENCIES:
+npm install express pug sqlite3 body-parser -> doesn't work
+npm install express pug better-sqlite3 body-parser
+
+npm install nodemon --save-dev
+
+To run app: node app.js
+
+Browser → Express Route → SQLite DB → Pug Template → Browser
+
+
+
+what is express, pug, nodejs, better-sqlite3
+
+backend development
+Folders separate responsibilities
+
+routes → URLs & logic
+
+database → DB connection
+
+views → UI (Pug)
+
+public → CSS / JS
+
+app.js → Entry point
+
+
+Backend: Node.js
+
+Framework: Express.js
+
+Template Engine: Pug
+
+Database: SQLite (better-sqlite3)
+
+Styling: CSS
+
+
+
+
+
+
+
+
+STUDENT MANAGEMENT: 
+Flask
+
+
+Pre requisites for Flask project:
+https://www.python.org/downloads/
+
+mkdir flask-student-app
+cd flask-student-app
+
+install python extension in vs code
+
+python -m venv venv
+venv\Scripts\activate
+
+pip install flask
+
+
+Project Structure:
+flask-student-app
+│── app.py
+│── student.db
+│
+├── templates
+│   ├── layout.html
+│   ├── index.html
+│   └── add.html
+│
+└── static
+    └── style.css
+
+
+
+To create files at once: 
+mkdir templates, static; `
+New-Item app.py, student.db -ItemType File; `
+New-Item templates\layout.html, templates\index.html, templates\add.html -ItemType File; `
+New-Item static\style.css -ItemType File
+
+to run project: python app.py
+
+
+
+
