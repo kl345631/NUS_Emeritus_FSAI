@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Student List
+  a(href="/add") ➕ Add Student
+  ul
+    each student in students
+      li
+        | #{student.name} - #{student.course}
+        a(href=`/delete/${student.id}`) ❌ Delete Student
