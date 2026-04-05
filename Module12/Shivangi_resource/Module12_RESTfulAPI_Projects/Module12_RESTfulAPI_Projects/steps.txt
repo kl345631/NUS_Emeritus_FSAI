@@ -1,0 +1,136 @@
+in command prompt: winget install Python.Python.3.11
+
+set environment variable
+#the above is not necessary unless you hit issue with python versions conflict
+
+C:\Users\govin\AppData\Local\Programs\Python\Python311\python.exe --version
+
+C:\Users\govin\AppData\Local\Programs\Python\Python311\python.exe -m venv venv
+
+Activate venv: venv\Scripts\activate
+
+pip install connexion[flask]==2.14.2 flask==2.2.5 werkzeug==2.2.3
+pip install connexion[swagger-ui]==2.14.2
+
+
+#check the version installed:
+python -c "import flask, connexion, werkzeug; print(flask.__version__, connexion.__version__, werkzeug.__version__)"
+
+
+
+You will now see:
+
+GET /students
+
+POST /students
+
+PUT /students/{id}
+
+DELETE /students/{id}
+
+
+
+
+
+
+
+API : APPLICATION PROGRAMMING INTERFACE
+AN API is bridge that allows two softwares application talk to each other.
+
+YOU : CUSTOMER
+KITCHEN : SERVER/DATABASE
+WAITER: API
+
+API hides internal logic
+API exposes only what is allowed
+API uses requests & responses
+
+RESTful Web Services
+REST-Representational State Transfer 
+
+A web service that follows REST Rules to expose APIs over http
+
+SOAP -> OLD
+REST -> SIMPLE, LIGHTWEIGHT, FAST, WEB-FRIENDLY
+
+GET, POST, PUT, DELETE
+
+REST ? 
+ Uses URLs for resources.
+ Uses HTTP methods
+ Stateless(server doesn't remember client)
+ Uses JSON max
+
+
+JSON?
+JavaScript object notation
+JSON is a lightweight data format used to exchange data between systems.
+1) easy to read and write
+2) language independent
+3) Smaller than XML
+
+{
+  "id": 1,
+  "name": "john"
+}
+
+
+Swagger?
+API documentation 
+API contract
+describes what an API does, not how it is coded
+
+
+POSTMAN?
+API Testing tool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

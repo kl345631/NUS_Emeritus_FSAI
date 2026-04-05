@@ -1,0 +1,139 @@
+
+use moviesDB
+
+
+
+db.movies.insertMany(
+[
+    {
+    "title": "Rocky",
+    "releaseDate": new Date("Dec 3, 1976"),
+    "genre": "Action",
+    "about": "A small-time boxer gets a supremely rarechance to fight a heavy-weight champion in a bout in which hestrives to go the distance for his self-respect.",
+    "countries": ["USA"],
+    "cast" : ["Sylvester Stallone","Talia Shire","Burt Young"],
+    "writers" : ["Sylvester Stallone"],
+    "directors" : ["John G. Avildsen"]
+    },
+    {
+    "title": "Rambo 4",
+    "releaseDate ": new Date("Jan 25, 2008"),
+    "genre": "Action",
+    "about": "In Thailand, John Rambo joins a group ofmercenaries to venture into war-torn Burma, and rescue a groupof Christian aid workers who were kidnapped by the ruthlesslocal infantry unit.",
+    "countries": ["USA"],
+    "cast" : [" Sylvester Stallone", "Julie Benz","Matthew Marsden"],
+    "writers" : ["Art Monterastelli","SylvesterStallone"],
+    "directors" : ["Sylvester Stallone"]
+    }
+]
+)
+
+db.movies.insertMany(
+[
+    {
+    "title": "A Woman of Paris",
+    "releaseDate": new Date("Nov 4, 1980"),
+    "genre": "Romance",
+    "about": "A kept woman runs into her one-time fiancè and finds herself torn betw…",
+    "countries": ["USA"],
+    "cast" : ["Edna Purviance","Clarence Geldart","Carl Miller","Lydia Knott"],
+    "writers" : ["Charles Chaplin"],
+    "directors" : ["Charles Chaplin"]
+    },
+      {
+    "title": "Two Seconds",
+    "releaseDate": new Date("May 5, 1985"),
+    "genre": "Thriller",
+    "about": "A condemned murderer, in the process of being executed, relives the ev…",
+    "countries": ["USA"],
+    "cast" : ["Edward G. Robinson","Vivienne Osborne","Guy Kibbee","Preston Foster"],
+    "writers" : ["Elliott Lester"],
+    "directors" : ["Mervyn LeRoy"]
+    },
+]
+)
+
+
+db.movies.find().pretty()
+
+db.awards.insertOne(
+{
+    "title": "Oscars",
+    "year": "1979",
+    "category": "Best film",
+    "nominees": ["Rocky", "Rambo 4", "Taxi Driver", "Pretty woman", "President"],
+    "winners" : [
+        {
+        "movie" : "Rocky"
+        }
+    ]
+}
+)
+
+db.awards.find().pretty()
+
+db.movies.find({genre:'Action'})
+
+db.movies.find({genre : "Action"},
+{"_id" : 0, "title" :1}).sort({"imdb.rating" : -1})
+.skip(1)
+// {"_id" : 0, "title" :1}).sort({"imdb.rating" : -1})
+// {
+//   title: 'Rocky'
+// }
+// {
+//   title: 'Rambo 4'
+// }
+// db.movies.find({genre : "Action"},
+// {"_id" : 0, "title" :1}).sort({"imdb.rating" : -1}).skip(1)
+// {
+//   title: 'Rambo 4'
+// }
+
+// other commands: .limit(11), toArray()
+
+
+var findMoviesByGenre = function(genre, pageNumber,pageSize){
+
+var toSkip = 0;
+
+if(pageNumber < 2){
+
+toSkip = 0;
+
+} else{
+
+toSkip = (pageNumber -1) * pageSize;
+
+}
+
+var movies = db.movies.find(
+
+{"genres" : genre},
+
+{"_id" : 0, "title" :1})
+
+.sort({"imdb.rating" : -1})
+
+.skip(toSkip)
+
+.limit(pageSize)
+
+.toArray()
+
+print("************* Page : " + pageNumber)
+
+for(var i =0; i < movies.length; i++){
+
+print(movies[i].title)
+
+}
+
+}
+//see Top 5 Sci-Fi movies on the second page
+findMoviesByGenre("Sci-Fi", 2, 5)
+
+//match all documents in the movies collection,receive a list of objects containing only the awards data
+db.movies.find({},{"awards":1, "_id":0})
+
+db.movies.find({},{"awards.wins":1, "awards.nominations":1, "_id":0})

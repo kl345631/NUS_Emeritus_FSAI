@@ -1,0 +1,155 @@
+Data: information collected from past
+Feature: Input column used to predict something: Clues , ex: loan history, income, credit score
+Target(Label): what we want to predict: Final Decision, ex: Approval
+Model: Mathematical machine that learns patterns from data: Detective, High income  -> Usually loan approved, Low credit score -> Usually loan rejected 
+Prediction: After learning from past data, getting output: Income:60k and credit score:750-> Approved(prediction)
+Error: If actual result was Approved but Model predicts Rejected. Model tries to reduce error.
+Training: Showing past data to model and letting it learn patterns.
+Learning: Adjusting internal parameters to reduce errors. In ANN: Those parameters = Weights
+
+ANN:
+Input layer: 
+Scenario: predict house price
+Input: Size, Location, Bedrooms: Inputs values go into first layer: Input layer: This layer just receives the data.
+
+Neuron: Decision Unit.
+Scenario: Job Interview
+Evaluate: Score=(Experience x Important) + (Communication x Important) + (Skills X Important)
+Above calculation = Neuron
+Neurons does what?
+1) Takes inputs
+2) Multiplies with Importance(weights)
+3) Adds Bias
+4) Produces Output
+
+Weight: Importance of a feature
+ex: income is more important than number of members in family.
+weight of income=High
+weight of members = low
+
+Bias: Shift decisions.
+ex: Even if income is low, bank may still approve loan if market condition are good.
+Flexibility = Bias, Bias allows decision boundaries to move.
+
+Weighted sum:
+Neuron calculates:
+ex: (Income x weight1)
+    (Credit score x weight2)
+    Bias
+The total = weighted sum : raw score.
+
+
+Hidden Layer: Creates new features internally
+Ex: Fraud detection:
+  Input: Amount, Time, Location
+Feature by hidden layer: Unusual pattern score, Risk score
+
+
+
+Output Layer:  Final decision layer
+ex: Binary classification: 0 or 1
+    Regression: Price Value
+    Multi-class: Dog/Cat/Horse/Cow
+
+Loss Function: How wrong the model is.
+ex: actual price: 10 lakh
+predicted price : 8 lakh
+Loss = 2 Lakh error
+
+
+Gradient Descent: Moves weights slowly toward lowest error: Model reduces error step by step.
+
+Epoch: One full round of training through entire dataset.
+If dataset has 1000 rows.
+1 epoch = Model sees all 1000 rows once.
+
+Batch size: Instead of showing 1000 rows at once.
+We show 32 rows at a time : this group batch 
+why?: faster and more stable learning
+
+Overfitting: Model memorizes data instead of learning patterns.
+High accuracy on training but low accuracy on new data
+scenario: student memorize answers, fails new questions.
+
+Underfitting: Model too simple.
+Student didn't study properly: poor performance everywhere
+
+
+Forward Propagation 
+Data Flows: INPUT -> HIDDEN -> OUTPUT
+
+Backward propagation: After error is calculated: Models adjusts weights
+
+
+
+
+Lets' Connect everything:
+1) Input data enters input later
+2) Neurons multiply by weights
+3) Activation Applied
+4) Output generate
+5) Loss Calculated
+6) Backpropagation updates weights
+7) Repeat many epochs
+8) Error reduces
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

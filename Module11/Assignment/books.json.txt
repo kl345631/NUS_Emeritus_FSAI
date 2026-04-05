@@ -1,0 +1,58 @@
+[
+{
+    "bookId": 101,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "year": "1925"
+    },
+  {
+    "bookId": 102,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "year": "1960"
+  },
+  {
+    "bookId": 103,
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "year": "1949"
+  },
+  {
+    "bookId": 104,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "year": "1937"
+  },
+  {
+    "bookId": 105,
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "year": "1932"
+  },
+{
+    "bookId": 106,
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "genre": "Adventure",
+    "year": "2001"
+  },
+  {
+    "bookId": 107,
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "genre": "Drama",
+    "year": "2003"
+  },
+  {
+    "bookId": 108,
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "genre": "Historical Fiction",
+    "year": "2005"
+  }
+]

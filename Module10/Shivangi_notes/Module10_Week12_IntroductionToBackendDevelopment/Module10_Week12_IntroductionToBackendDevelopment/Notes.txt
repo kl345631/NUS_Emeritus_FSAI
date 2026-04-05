@@ -251,7 +251,7 @@ mkdir public
 
 CREATE ALL FILES AT ONCE
 type nul > app.js
-type nul > package.json
+type nul > package.json (kim: no need to create as it will be auto created after running npm init)
 
 type nul > database\db.js
 type nul > routes\studentRoutes.js
@@ -262,7 +262,7 @@ type nul > public\style.css
 
 
 
-INSTALL DEPENDENCIES:
+INSTALL DEPENDENCIES (aka drivers):
 npm install express pug sqlite3 body-parser -> doesn't work
 npm install express pug better-sqlite3 body-parser
 

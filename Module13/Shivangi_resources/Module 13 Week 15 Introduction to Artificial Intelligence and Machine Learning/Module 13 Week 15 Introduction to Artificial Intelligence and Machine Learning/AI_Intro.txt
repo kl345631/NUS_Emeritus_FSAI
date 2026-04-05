@@ -1,0 +1,222 @@
+AI: Artificial Intelligence
+AI enables machines to simulate human intelligence
+
+Calculator is AI or Not? -> No -> fixed rule-based
+Google Map? Yes -> It predicts traffic, routes
+
+
+
+
+BRANCHES OF AI:
+ML: Machine Learning: Learns from data
+DL: Deep Learning: Uses neural networks
+NLP: Natural Language Processing: Understands human language 
+Computer Vision: Works with Images/Videos
+Robotics: Physical machine using AI
+
+MACHINE LEARNING:
+ML allows machine to learn from data
+No explicit rules are programmed
+ML models improve performance over time
+Data/examples/Expected outcomes
+
+
+Deep Learning:
+DL is subset of ML.
+Inspired by Human brain.
+It uses: Artificial Neurons, Multiple layers, Large datasets
+EX: face recognition, Speech-to-text
+
+
+NLP: human language
+includes: Understanding text, generating text, Translating languages
+Ex: chatbots, Google translate, Voice assistants
+
+Computer Vision: deals with visual data.
+Machine learns to: See images, detect objects, recognize faces
+ex: face unlock, CCTV Analysis, Recognize faces
+
+Robotics:
+Robotics combines AI, Sensors, Hardware
+Robots perceive environment and act accordingly/intelligently.
+Ex: warehouse robots, surgical robot
+
+
+MACHINE LEARNING TYPES:
+#Supervised Learning: The model learns from labeled data
+Every input has already a correct output
+models learns mapping between input and output.
+
+Input data-> Features
+Output data -> Labels
+
+Sub domain of SL:
+1) Regression: Used when the output is numeric.
+Ex: House price prediction, Salary prediction, Temperature prediction
+ Common Algorithm: Linear Regression, Polynomial regression, Ridge regression ..
+
+ex: house prediction:
+  feature: size, location, number of rooms -> predict price 
+
+2) Classification: Used when the output is categorical.
+ex: spam/not spam, Pass/Fail, Disease/No 
+ex: spam /not spam: certain words, suspicious links, unknown sender
+ Algo: Logistics regression, Decision tree, SVM(Support vector machine) ...
+
+
+
+# Unsupervised Learning: the data has no labels.
+Don't know the correct output.
+Tries to discover patterns, structure or relationships
+Sub domains of UL:
+1) Clustering: Groups similar data points together.
+ex: customer segmentation, grouping similar products, social network analysis.
+ex: you walked into a library, where books are mixed randomly.
+ no labels, no catagories, 
+start grouping them: science books together, novels together, exam prep together
+
+Algo: K-Mean Clustering, Hierarchical clustering, Mean shift ...
+
+2) Association rule Learning
+Finds relationships between items.
+Ex: market based analysis(bread/butter), Recommendation engines,
+
+Algo: FP-Growth, Eclat Alg ...
+
+3) Dimensionality reduction
+Reduces number of features while keeping important information.
+why?
+ High dimensional data is complex.
+ Visualization becomes difficult
+ Models become slow
+ex: you got 1000 resumes having marks, skills, experience, projects, certifications
+we don't need everything to shortlist a candidate.
+we need only top skills, experience, relevant projects
+
+ALGO: PCA, LDA, t-SNE, UMAP...
+
+# Semi- Supervised Learning
+Mix of SL and UL.
+Large amount of unlabeled data and small amount of labeled data.
+How learning happens:
+1) Train initial model on labeled data.
+2) Use model to label unlabeled data.
+3) Retrain using combined data.
+
+ex: language learning with limited teacher
+watch videos/movies, read books, talk to people
+
+ALGO: Self-Training, Co-Training, Label propagation ...
+
+
+# Reinforcement Learning: Learning happens through interaction with an environment
+
+No labeled dataset.
+Only rewards and penalties
+Sub domains of RL:
+1)Model-Based RL:
+   Agent builds a model of environment
+   plans actions in advance
+   ALGO: dynamic programming, Monte carlo methods..
+
+2) Model-Free RL
+  Learns directly from experiences
+  No environment model
+ALGO: Q-Learning, SARSA ...
+
+3) Policy based methods
+Learns best strategy directly
+ex: professional football strategy.
+A coach doesn’t think move-by-move.
+He creates a strategy:
+Attack aggressively
+Defend when tired
+Players follow policy, not calculations.
+ALGO: REINFORCE ..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
