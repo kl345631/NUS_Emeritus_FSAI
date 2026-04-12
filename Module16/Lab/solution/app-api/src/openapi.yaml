@@ -1,0 +1,60 @@
+openapi: "3.0.0" 
+info: 
+  description: API Endpoints for serving Machine Learning Models 
+  version: 1.0.0 
+  title: API Endpoints for serving Machine Learning Models 
+
+servers: 
+  - url: http://localhost:8000/api
+paths:
+  /models/irisClassifier:
+    put:
+      summary: Iris flower classification
+      operationId: models.irisClassifier
+      requestBody:
+        description: Input data for Iris classification
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sepal_length:
+                  type: number
+                sepal_width:
+                  type: number
+                petal_length:
+                  type: number
+                petal_width:
+                  type: number
+      responses:
+        '200':
+          description: Successful prediction
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  prediction:
+                    type: string
+        '500':
+          description: Internal Server Error
+          
+  /models/shapesClassifier:
+      post:
+        summary: Classify an image of a shape (circle, square, star, triangle)
+        operationId: models.shapesClassifier
+        requestBody:
+          content:
+            multipart/form-data:
+              schema:
+                type: object
+                properties:
+                  image:
+                    type: string
+                    format: binary
+        responses:
+          '200':
+            description: Success
+          '500':
+            description: Error
