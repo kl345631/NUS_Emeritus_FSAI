@@ -1,0 +1,92 @@
+Model Persistence?
+Saving a trained machine learning model so that it can be used later without training again.
+
+Input: House Area, Bedrooms
+Output: House Price
+
+price = w1 x area x w2 x bedrooms x bias
+
+If we don't save the model, we have to train it every time.
+Saved trained model to a file: 
+ex: model.pkl, model.joblib, model.h5, model.pt
+
+
+
+Model Serving:
+Model persistence only saves the model.
+but how do users access the model?
+We must expose it through an API or service.
+
+Making the trained model available for applications to use.
+
+FOOR DELIVERY ETA SYSTEM:
+Mobile App -> Backend API -> ML Model Server -> Prediction
+send request  -> POST /predict -> Delivery time = 28 minutes
+
+Training: Dataset -> ML Algorithm -> Model.pkl
+
+Serving: User Input -> Model.pkl -> Prediction
+
+WAYS TO SERVE MODELS:
+1) FlasK API -> ML Model
+2) FastAPI -> ML Model
+3) MLflow Model Serving
+4) TensorFlow Serving
+
+END TO END FLOW
+STEP 1: Train model
+STEP 2: Save model
+STEP 3: Create API
+STEP 4: Load model in API
+STEP 5: Front send request
+STEP 6: Model returns prediction
+
+
+
+
+
+
+ml_project_model:
+scikit-learn project libraries
+pip install scikit-learn pandas joblib
+
+
+keras_model_project
+pip install tensorflow numpy
+
+
+
+
+flask_ml_api
+
+pip install flask scikit-learn pandas joblib
+
+
+pip uninstall connexion -y
+pip install connexion[flask]
+pip install connexion[uvicorn]
+
+
+marks-frontend
+pip install flask-cors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

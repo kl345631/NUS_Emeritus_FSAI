@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: Marks Prediction API
+  version: "1.0"
+
+paths:
+  /predict:
+
+    options:
+      operationId: predictor.options_handler
+      responses:
+        "200":
+          description: CORS OK
+
+    post:
+      operationId: predictor.predict_marks
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                hours:
+                  type: number
+      responses:
+        "200":
+          description: Prediction result

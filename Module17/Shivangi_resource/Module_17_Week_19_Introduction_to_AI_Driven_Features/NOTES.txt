@@ -1,0 +1,243 @@
+A recommendation system is an AI system that suggests items to users based on their 
+preferences, behaviours or similarities with other users.
+
+Recommendation system is an AI model that predicts what a user might like
+and suggest relevant items automatically.
+
+
+Why companies use Recommendation systems:
+They increase:
+ User engagement
+ watch time
+ purchases/sales
+ revenue
+
+
+Types of Recommendation systems:
+1) Content based filtering: Recommend items similar to what the user liked before.
+   
+2) Collaborative filtering: Recommend items based on similar users  preferences.
+
+3) Hybrid System: Combine Content based filtering and Collaborative filtering
+
+
+CONTENT BASED RECOMMENDATION SYSTEM:
+Recommends items based on item features and user preferences.
+ex: Movie     Genre     Actor               Director
+    Avengers  action   Robert Downey Jr     Marvel
+    Iron Man  action   Robert Downey Jr     Marvel
+    Titanic   Romance  Leonardo    	    Cameron
+
+-> BUILDING CONTENT BASED RECOMMENDATION SYSTEM:
+
+Step 1: Data Collection
+ex: Movie     Genre     Actor               Director
+    Avengers  action   Robert Downey Jr     Marvel
+    Iron Man  action   Robert Downey Jr     Marvel
+    Titanic   Romance  Leonardo    	    Cameron
+
+Step 2: Data Processing
+-> Cleaning and preparing data for ML.
+   like: Remove missing value, Remove duplicates, convert text into usable format, Merge columns
+
+Step 3: Feature Extraction
+We convert text into numbers.
+
+Step 4: Similarity finder function
+
+Once the data becomes numbers, we calculate similarity between items.
+Ex: 
+vectors:
+[1.3,4.5,3.4,6.7]  -> avengers
+[2.1,4.5,1.2,6.3]  -> Iron Man
+[9.6,9.8,7.4,8.6]
+
+High similarity -> high recommendation
+
+======================================================================================
+
+COLLABORATIVE FILTERING:
+It uses: User ratings, Purchase history, Watch history
+ex: 
+User	Movie A		Movie B		Movie C
+User1   Like   		Like 		?
+User2	Like		Like 		Like
+
+If User1 and User2 like same movies, recommend Movie C to User1.
+
+
+  USER-ITEM MATRIX: it shows users and their ratings for items.
+Ex: 
+User	Movie A		Movie B		Movie C
+User1   5   		4 		?
+User2	5		5 		4
+User3   2		1		5
+
+  SPARSE MATRIX: Most cells in the Matrix are empty because user don't rate every iitem
+Ex: 
+User	Movie A		Movie B		Movie C
+User1   5   		 		
+User2			4		
+User3   				3
+
+K-Nearest Neighbours(kNN) For recommendation
+kNN finds similar users or similar items.
+ex: User Similarity:
+   User1 likes: Avengers and Iron Man
+   User2 likes: Avengers, Iron Man and Thor
+
+User1 and User2 are nearest neighbours. System recommends Thor to User1.
+K means: How many similar users we consider. ex: k = 5, so the algorithm finds 5 most similar users.
+
+ MATRIX FACTORISARION: instead of using raw user-item matrix, finds hidden patterns in the data.
+
+It tries to discover: User Interests, Item charateristics
+
+
+
+
+
+MSE: difference between predicted and actual value
+it tells how wrong our model's predictions are on average
+
+Error =  Actual Value - Predicted Value
+then square of Error
+Then take the average of all squared error
+
+STEP 1: Calculate error
+House   Actual    Predicted   Error
+H1       100       90          10
+H2       150       140         10
+H3       200       210        -10
+
+
+STEP 2: Square Error
+House        Error   Squared Error
+H1             10      100
+H2             10      100
+H3            -10      100
+
+STEP 3: Calculate MSE
+
+MSE = Average of square error
+MSE = (100+100+100)/3
+MSE = 100
+
+
+CALCULATE RMSE(Square root of MSME-actual error scale)
+RMSE = SQUARE ROOT OF 100 = 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

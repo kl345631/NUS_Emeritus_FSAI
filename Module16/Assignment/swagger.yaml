@@ -1,0 +1,27 @@
+openapi: "3.0.0"
+info:
+  title: "Model Serving API"
+  version: "1.0.0"
+
+servers:
+  - url: "/api"
+
+paths:
+  /predict:
+    post:
+      summary: "Predict outcome"
+      operationId: "app.predict"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                feature1:
+                  type: number
+                feature2:
+                  type: number
+      responses:
+        "200":
+          description: "Success"
